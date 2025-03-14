@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literatura</title>
+    <style>
+.popup {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+            display: none;
+            text-align: center;
+            animation: fadeIn 0.5s;
+            cursor: pointer; /* Hace que el cuadro sea clickeable */
+        }
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .popup img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .close-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            display: block;
+        }
+    </style>    
+</head>
+<body>
+    <div id="popup" class="popup" onclick="goToPage()">
+        <h3>¡Oferta Especial! 🎉</h3>
+        <img id="popup-image" src="publicidad3.jpg" alt="Publicidad">
+        <button class="close-btn" onclick="event.stopPropagation(); closePopup()">Cerrar ❌</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        function goToPage() {
+            window.location.href = "viajes.html";
+        }
+
+        setInterval(showPopup, 10000);
+    </script>
+    
+    </body>
+</html>
