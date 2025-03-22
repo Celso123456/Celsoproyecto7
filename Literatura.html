@@ -1,0 +1,224 @@
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literatura</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+        background-color:  #d5ecf6;
+            overflow-x: hidden;
+        }
+
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            width: 250px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+        }
+        .popup img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .close-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .popup-left {
+            left: 20px;
+        }
+        .popup-right {
+            right: 20px;
+        }
+        .imagen-cuadro {
+            width: 700px;
+            height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+        }
+
+        .imagen-cuadro img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* Contenedor para las imágenes */
+        .imagen-cuadro2, .imagen-cuadro3 {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .imagen-cuadro2 img, .imagen-cuadro3 img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .boton-publicidad1 {
+            position: absolute;
+            bottom: 70%; 
+            left: 25%;
+            transform: translateX(-50%);
+            background-color: white;
+            color: black;
+            width: 150px; 
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boton-publicidad1:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .boton-publicidad2 {
+            position: absolute;
+            bottom: 8%; 
+            left: 70%;
+            transform: translateX(-50%);
+            background-color: white;
+            color: black;
+            width: 300px; 
+            padding: 7px;
+            border: 2px solid black;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boton-publicidad2:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        .botones-izquierda {
+            position: fixed;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        border-radius:50%;
+        }
+
+        .boton {
+            background-color: #0d2552;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        border-radius: 25px
+        }
+
+        .boton:hover {
+            background-color: #0a1d3d;
+        }
+
+    </style>    
+</head>
+<body>
+
+    <div class="boton">
+        <button class="boton" onclick="window.open('index.html', '_blank')">Página principal</button>
+        <button class="boton" onclick="window.open('BioyQuim.html', '_blank')">Recetas de jabones </button>
+	<button Class="boton" onclick="window.open('Fisica_fun.html', '_blank')">Generador de burbujas</button>
+	<button class="boton" onclick="window.open('Artes.html', '_blank')">Molecula</button>
+        <button class="boton" onclick="window.open('Ingles.html', '_blank')">Inglés</button>
+	<button class="boton" onclick="window.open('Valores.html', '_blank')">Valores del equipo</button>
+        <button class="boton" onclick="window.open('Estadistica.html', '_blank')">Formulario</button>
+
+
+    </div>
+
+<br>
+    
+
+
+    <div class="imagen-cuadro">
+        <img src="lit1.png">
+    </div>
+
+    <div class="imagen-cuadro2">
+        <img src="publicidad1.jpg">
+        <a href="Crepas.html" class="boton-publicidad1">Click aquí</a>
+    </div>
+
+    <div class="imagen-cuadro">
+        <img src="lit2.png">
+    </div>
+
+<div class="imagen-cuadro3">
+        <img src="publicidad2.jpg"> 
+        <a href="bitcoin.html" class="boton-publicidad2">Click aquí</a>
+    </div>
+
+<!-- Cuadro emergente de publicidad -->
+    <div id="popup-left" class="popup popup-left" onclick="goToPage('viajes.html')">
+        <h3>¡Oferta Especial! 🎉</h3>
+        <img src="publicidad3.jpg" alt="Publicidad">
+        <button class="close-btn" onclick="event.stopPropagation(); closePopup('popup-left')">Cerrar ❌</button>
+    </div>
+    
+    <div id="popup-right" class="popup popup-right" onclick="goToPage('carros.html')">
+        <h3>¡Nuevos Modelos! 🚗</h3>
+        <img src="Carros.png" alt="Publicidad">
+        <button class="close-btn" onclick="event.stopPropagation(); closePopup('popup-right')">Cerrar ❌</button>
+    </div>
+
+    <script>
+        function showPopup(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function closePopup(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        function goToPage(url) {
+            window.location.href = url;
+        }
+
+        setInterval(() => showPopup('popup-left'), 10000);
+        setInterval(() => showPopup('popup-right'), 15000);
+    </script>
+</body>
+</html>
