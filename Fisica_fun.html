@@ -1,0 +1,170 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisica fundamental</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+
+body {
+            background-color:  #d5ecf6;
+            overflow-x: hidden;
+        }
+
+/* Burbujas */
+        .burbuja {
+            position: absolute;
+            background-color: rgba(18, 144, 128, 0.5);
+            border-radius: 50%;
+            animation: burbujear 20s infinite ease-in-out;
+        }
+        
+        @keyframes burbujear {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-100% * 5)); } /* Desliza todas las imágenes */
+        }
+
+
+
+	.texto {
+                margin-left: 20px;
+	font-size: 18px;
+        line-height: 1.6;
+	    margin-left: 200px;
+            margin-right:300px;
+            }
+
+        .imagen-cuadro {
+            width: 500px;
+            height: 480px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+	    margin-left: 350px;
+            margin-right:350px;
+        }
+
+        .imagen-cuadro img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+	.botones-izquierda {
+            position: fixed;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+	    border-radius:50%;
+        }
+
+        .boton {
+            background-color: #0d2552;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+	    border-radius: 25px
+        }
+
+        .boton:hover {
+            background-color: #0a1d3d;
+        }
+	
+	
+
+
+</style>	
+</head>
+<body>
+
+
+	<div class="boton">
+        <button class="boton" onclick="window.open('index.html', '_blank')">Página principal</button>
+        <button class="boton" onclick="window.open('BioyQuim.html', '_blank')">Recetas de jabones </button>
+	<button class="boton" onclick="window.open('Artes.html', '_blank')">Molecula</button>
+	<button class="boton" onclick="window.open('Ingles.html', '_blank')">Inglés</button>
+        <button class="boton" onclick="window.open('Literatura.html', '_blank')">Publicidad</button>
+        <button class="boton" onclick="window.open('Valores.html', '_blank')">Valores del equipo</button>
+	<button Class="boton" onclick="window.open('Estadistica.html', '_blank')">Generador de burbujas</button>
+    </div>
+<br>
+<br>	
+<div class="imagen-cuadro">
+<video width="700" height="570" controls>
+    <source src="Expe.mp4" type="video/mp4">
+</video>
+</div>	
+
+<br>
+<br>
+<br>
+
+<div class="texto">
+  <h1>Funcionamiento del Proyecto: Movimiento Circular Uniforme (MCU) </h1>
+    <p>
+      El <strong>Movimiento Circular Uniforme (MCU)</strong> se refiere al desplazamiento de un objeto a lo largo de una trayectoria circular, 
+      manteniendo una velocidad constante en módulo durante todo el recorrido. Aunque la magnitud de la velocidad permanece invariable, 
+      la dirección del movimiento cambia continuamente, ya que el objeto está en constante giro alrededor de un punto central.
+    </p>
+    <p>
+      Este tipo de movimiento se caracteriza por su <strong>estabilidad y regularidad</strong>, lo cual lo hace especialmente útil en aplicaciones 
+      donde se requiere un giro constante y uniforme, como en el caso del <strong>disco giratorio de un generador de burbujas</strong>.
+    </p>
+
+<h2>Componentes clave del MCU en el contexto del proyecto:</h2>
+    <ul>
+      <li><strong>Disco giratorio:</strong> Su velocidad angular debe permanecer constante para asegurar la formación continua y uniforme de burbujas.</li>
+      <li><strong>Motor eléctrico:</strong> Controla el giro del disco, garantizando que la frecuencia y el período de rotación sean adecuados para un funcionamiento eficiente.</li>
+      <li><strong>Aceleración centrípeta:</strong> Es fundamental calcular la fuerza centrípeta necesaria para mantener el disco en movimiento circular sin perder estabilidad.</li>
+      <li><strong>Movimiento constante:</strong> Si el disco gira a velocidad constante, realiza un MCU, lo que permite generar burbujas de manera regular y predecible.</li>
+      <li><strong>Movimiento circular uniformemente variado (MCUv):</strong> Si el disco acelera o desacelera, está ejecutando un MCUv. Este tipo de movimiento puede generar efectos visuales más atractivos o adaptarse a distintas fases del proceso.</li>
+    </ul>
+
+<h2>Aplicación técnica y educativa del sistema</h2>
+    <p>
+      La mecánica del sistema se basa en principios de <strong>automatización básica</strong> y <strong>transferencia de movimiento</strong>, 
+      lo que da lugar a un diseño altamente funcional. Este puede optimizarse mediante ajustes en la velocidad del motor, la composición del 
+      líquido jabonoso o la forma de la hélice, buscando maximizar la eficiencia en la producción de burbujas.
+    </p>
+    <p>
+      Además de su aplicación técnica, este proyecto representa una excelente <strong>actividad didáctica</strong> para la comprensión de 
+      <strong>conceptos fundamentales de física y mecánica</strong>. Permite explorar de forma interactiva nociones como la 
+      <strong>aerodinámica</strong>, la <strong>presión del aire</strong> y la <strong>tensión superficial del agua</strong>, convirtiéndolo en una herramienta educativa valiosa.
+    </p>
+    <p>
+      Este tipo de experimentos también favorece el desarrollo de competencias en <strong>ingeniería y robótica</strong>, proporcionando una base 
+      sólida para proyectos más complejos. Su utilidad trasciende lo recreativo, ya que también puede ser empleado en entornos académicos para 
+      ilustrar cómo funcionan distintos mecanismos en la vida real.
+    </p>
+</div>
+    <div class ="Burbujas">
+<!-- Burbujas -->
+    <div class="burbuja" style="width: 20px; height: 20px; top: 90%; left: 10%;"></div>
+    <div class="burbuja" style="width: 30px; height: 30px; top: 85%; left: 25%;"></div>
+    <div class="burbuja" style="width: 40px; height: 40px; top: 80%; left: 50%;"></div>
+    <div class="burbuja" style="width: 25px; height: 25px; top: 75%; left: 70%;"></div>
+    <div class="burbuja" style="width: 35px; height: 35px; top: 70%; left: 90%;"></div>
+    </div>
+
+</body>
+</html>
